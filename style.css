@@ -208,3 +208,115 @@ body {
     .navbar { padding: 1rem 5%; }
     .nav-links { gap: 1rem; }
 }
+
+/* Art Section */
+.art-section {
+    padding: 5rem 10%;
+    background-color: var(--bg-color);
+}
+
+.section-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+/* 3x2 Grid Formatting */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Forces exactly 3 columns on desktop */
+    gap: 1.5rem;
+}
+
+/* Individual Art Image Containers */
+.art-card {
+    position: relative;
+    aspect-ratio: 4 / 3; /* Maintains standard landscape framing */
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    background-color: var(--card-bg);
+}
+
+.art-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops image uniformly into the grid cell */
+    transition: transform 0.5s ease;
+}
+
+/* Dark Overlay Text Effect on Mouse Hover */
+.art-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85); /* Matches site background dark tone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+    text-align: center;
+}
+
+.art-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+/* Hover States trigger animation */
+.art-card:hover img {
+    transform: scale(1.05); /* Gentle image zoom */
+}
+
+.art-card:hover .art-overlay {
+    opacity: 1;
+}
+
+.art-card:hover .art-title {
+    transform: translateY(0);
+}
+
+/* ArtStation Link Formatting */
+.artstation-container {
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.btn-artstation {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.9rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: #131722; /* Sleek signature ArtStation slate dark palette */
+    color: #38bdf8;
+    border: 1px solid #38bdf8;
+    transition: all 0.3s ease;
+}
+
+.btn-artstation:hover {
+    background-color: #38bdf8;
+    color: #131722;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Mobile Screen Breakpoints */
+@media (max-width: 900px) {
+    .art-grid {
+        grid-template-columns: repeat(2, 1fr); /* Drops to a 2-wide grid layout on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .art-grid {
+        grid-template-columns: 1fr; /* Drops to single column layout on tight phone viewports */
+    }
+}
