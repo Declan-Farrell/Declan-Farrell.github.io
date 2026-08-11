@@ -66,35 +66,35 @@
         <h2>Art & Design Portfolio</h2>
         <p class="section-intro">A collection of my creative work, concepts, and 3D modeling projects.</p>
         
-        <div class="art-grid">
+         <div class="art-grid">
             <!-- Row 1: Image 1 -->
-            <div class="art-card">
-                <img src="assets/art1.jpg" alt="Art Piece 1">
+            <div class="art-card lightbox-trigger">
+                <img src="assets/art1.jpg" alt="Artwork Title One">
                 <div class="art-overlay"><span class="art-title">Artwork Title One</span></div>
             </div>
             <!-- Row 1: Image 2 -->
-            <div class="art-card">
-                <img src="assets/art2.jpg" alt="Art Piece 2">
+            <div class="art-card lightbox-trigger">
+                <img src="assets/art2.jpg" alt="Artwork Title Two">
                 <div class="art-overlay"><span class="art-title">Artwork Title Two</span></div>
             </div>
             <!-- Row 1: Image 3 -->
-            <div class="art-card">
-                <img src="assets/art3.jpg" alt="Art Piece 3">
+            <div class="art-card lightbox-trigger">
+                <img src="assets/art3.jpg" alt="Artwork Title Three">
                 <div class="art-overlay"><span class="art-title">Artwork Title Three</span></div>
             </div>
             <!-- Row 2: Image 4 -->
-            <div class="art-card">
-                <img src="assets/art4.jpg" alt="Art Piece 4">
+            <div class="art-card lightbox-trigger">
+                <img src="assets/art4.jpg" alt="Artwork Title Four">
                 <div class="art-overlay"><span class="art-title">Artwork Title Four</span></div>
             </div>
             <!-- Row 2: Image 5 -->
-            <div class="art-card">
-                <img src="assets/art5.jpg" alt="Art Piece 5">
+            <div class="art-card lightbox-trigger">
+                <img src="assets/art5.jpg" alt="Artwork Title Five">
                 <div class="art-overlay"><span class="art-title">Artwork Title Five</span></div>
             </div>
             <!-- Row 2: Image 6 -->
-            <div class="art-card">
-                <img src="assets/art6.jpg" alt="Art Piece 6">
+            <div class="art-card lightbox-trigger">
+                <img src="assets/art6.jpg" alt="Artwork Title Six">
                 <div class="art-overlay"><span class="art-title">Artwork Title Six</span></div>
             </div>
         </div>
@@ -118,6 +118,42 @@
     <footer class="footer">
         <p>&copy; 2026 Your Name. All rights reserved.</p>
     </footer>
+<!-- Lightbox Pop-up Structure -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <div id="lightbox-caption"></div>
+    </div>
 
+    <!-- Lightbox Controller Script -->
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        // Open Lightbox when an art card is clicked
+        document.querySelectorAll('.lightbox-trigger').forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('img');
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = img.alt;
+            });
+        });
+
+        // Close Lightbox clicking the 'X' button
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Close Lightbox clicking anywhere in the dark background
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    
 </body>
 </html>
