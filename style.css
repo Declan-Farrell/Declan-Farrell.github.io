@@ -433,3 +433,40 @@ body {
         color: var(--accent-color); /* This will turn the link blue when hovered over */
         transform: translateX(4px);
     }
+
+/* Horizontal Scroll Container Styling */
+.projects-scroll-wrapper {
+    display: flex; /* Forces elements to sit side-by-side */
+    gap: 2rem; /* Spacing between individual cards */
+    overflow-x: auto; /* Enables a functional horizontal scroll bar */
+    overflow-y: hidden; /* Completely prevents vertical spilling */
+    padding: 1.5rem 0.5rem 2.5rem 0.5rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Ensures smooth finger swipes on iPhones/tablets */
+}
+
+    /* Individual Project Card Width Overrides */
+    .projects-scroll-wrapper .project-card {
+        flex: 0 0 360px; /* Locks each card into a fixed responsive width */
+        max-width: 100%;
+    }
+
+    /* Custom Scrollbar Visual Styling */
+    .projects-scroll-wrapper::-webkit-scrollbar {
+        height: 8px; /* Thickness of the horizontal bar tracking lane */
+    }
+
+    .projects-scroll-wrapper::-webkit-scrollbar-track {
+        background: #0f172a; /* Matches base system layout backdrop canvas */
+        border-radius: 10px;
+    }
+
+    .projects-scroll-wrapper::-webkit-scrollbar-thumb {
+        background: #334155; /* Dark slate slider knob handle */
+        border-radius: 10px;
+        border: 1px solid #1e293b;
+    }
+
+        .projects-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color); /* Turns signature blue when clicked or hovered */
+        }

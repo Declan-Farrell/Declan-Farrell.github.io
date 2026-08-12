@@ -37,77 +37,126 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <h2>Featured Projects</h2>
-        <div class="projects-grid">
+
+        <!-- The scroll container wrapping the grid slots -->
+        <div class="projects-scroll-wrapper" id="projectScroller">
+
             <!-- Project 1 -->
             <div class="project-card">
-                <!-- Short Looping Video Slot -->
                 <div class="video-container">
                     <video autoplay loop muted playsinline>
-                        <source src="assets/bloodlineageclip.mp4" type="video/mp4">
+                        <source src="assets/project1-demo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="project-info">
-                    <h3>Blood & Lineage</h3>
-                    <p>A procedurally generated dungeon-crawling roguelite RPG for 1-4 players. This game served as my capstone project in my final year of the Game Development program at Algonquin College.</p>
-                    <div class="tags"><span>Co-op</span><span>Roguelite</span><span>RPG</span></div>
-
-                    <!-- Live Website Link Slot -->
-                    <a href="https://store.steampowered.com/app/4653740/Blood__Lineage/" target="_blank" rel="noopener noreferrer" class="project-site-link">
-                        Steam Page &rarr;
+                    <h3>Project Title One</h3>
+                    <p>A brief summary of what this project does, the technical problems solved, and the final results.</p>
+                    <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <a href="https://your-live-website-link1.com" target="_blank" rel="noopener noreferrer" class="project-site-link">
+                        Visit Live Site &rarr;
                     </a>
                 </div>
             </div>
 
             <!-- Project 2 -->
             <div class="project-card">
-                <!-- Short Looping Video Slot -->
                 <div class="video-container">
                     <video autoplay loop muted playsinline>
-                        <source src="assets/uddermayhemclip1.mp4" type="video/mp4">
+                        <source src="assets/project2-demo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="project-info">
-                    <h3>Udder Mayhem</h3>
-                    <p>A round-based survival game where you play as a farmer defending his cows from cowtipping teens. My first solo game project.</p>
-                    <div class="tags"><span>Singleplayer</span><span>FPS</span><span>Round-Based Survival</span></div>
-
-                    <!-- Live Website Link Slot -->
-                    <a href="https://figure4games.itch.io/uddermayhem" target="_blank" rel="noopener noreferrer" class="project-site-link">
-                        Itch.io Page &rarr;
+                    <h3>Project Title Two</h3>
+                    <p>A brief summary of what this project does, the technical problems solved, and the final results.</p>
+                    <div class="tags"><span>React</span><span>API</span><span>Node.js</span></div>
+                    <a href="https://your-live-website-link2.com" target="_blank" rel="noopener noreferrer" class="project-site-link">
+                        Visit Live Site &rarr;
                     </a>
                 </div>
             </div>
 
             <!-- Project 3 -->
             <div class="project-card">
-                <!-- Short Looping Video Slot -->
                 <div class="video-container">
                     <video autoplay loop muted playsinline>
-                        <source src="assets/applecatcherclip.mp4" type="video/mp4">
+                        <source src="assets/project3-demo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="project-info">
-                    <h3>Apple Catcher</h3>
-                    <p>A game about catching falling apples with a basket. My most recent project.</p>
-                    <div class="tags"><span>Singleplayer</span><span>2.5D</span><span>Arcade</span></div>
-
-                    <!-- Live Website Link Slot -->
-                    <a href="https://figure4games.itch.io/apple-catcher" target="_blank" rel="noopener noreferrer" class="project-site-link">
-                        Itch.io Page &rarr;
+                    <h3>Project Title Three</h3>
+                    <p>A brief summary of what this project does, the technical problems solved, and the final results.</p>
+                    <div class="tags"><span>Python</span><span>SQL</span></div>
+                    <a href="https://your-live-website-link3.com" target="_blank" rel="noopener noreferrer" class="project-site-link">
+                        Visit Live Site &rarr;
                     </a>
                 </div>
             </div>
+
+            <!-- Project 4 (New Slot) -->
+            <div class="project-card">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/project4-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-info">
+                    <h3>Project Title Four</h3>
+                    <p>A brief summary of what this project does, the technical problems solved, and the final results.</p>
+                    <div class="tags"><span>Vue</span><span>Firebase</span></div>
+                    <a href="https://your-live-website-link4.com" target="_blank" rel="noopener noreferrer" class="project-site-link">
+                        Visit Live Site &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 5 (New Slot) -->
+            <div class="project-card">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="assets/project5-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-info">
+                    <h3>Project Title Five</h3>
+                    <p>A brief summary of what this project does, the technical problems solved, and the final results.</p>
+                    <div class="tags"><span>TypeScript</span><span>Next.js</span></div>
+                    <a href="https://your-live-website-link5.com" target="_blank" rel="noopener noreferrer" class="project-site-link">
+                        Visit Live Site &rarr;
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <!-- Horizontal Mouse-Wheel Scrolling Script -->
+    <script>
+        const scroller = document.getElementById('projectScroller');
+
+        scroller.addEventListener('wheel', (e) => {
+        // Check if the content is wide enough to actually scroll horizontally
+        if (scroller.scrollWidth > scroller.clientWidth) {
+        e.preventDefault(); // Prevents the main browser page from moving up/down
+
+        // Intercept vertical scroll delta and push it horizontally
+        scroller.scrollBy({
+        left: e.deltaY * 1.5, // The 1.5 multiplier makes the glide feel snappy
+        behavior: 'auto'      // Keeps mouse tracking real-time and instant
+        });
+        }
+        }, { passive: false }); // Explicitly allows preventDefault to fire smoothly
+    </script>
 
     <!-- Art Showcase Section -->
     <section id="art" class="art-section">
         <h2>Art Portfolio</h2>
         <p class="section-intro">A collection of my art projects.</p>
-        
+
         <div class="art-grid">
             <!-- Row 1: Image 1 -->
             <div class="art-card lightbox-trigger">
@@ -148,7 +197,7 @@
             </a>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2>Get In Touch</h2>
@@ -160,7 +209,7 @@
     <footer class="footer">
         <p>&copy; 2026 Declan Farrell. All rights reserved.</p>
     </footer>
-<!-- Lightbox Pop-up Structure -->
+    <!-- Lightbox Pop-up Structure -->
     <div id="lightbox" class="lightbox-modal">
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img" src="" alt="">
@@ -176,26 +225,26 @@
 
         // Open Lightbox when an art card is clicked
         document.querySelectorAll('.lightbox-trigger').forEach(card => {
-            card.addEventListener('click', () => {
-                const img = card.querySelector('img');
-                lightbox.style.display = 'flex';
-                lightboxImg.src = img.src;
-                lightboxCaption.textContent = img.alt;
-            });
+        card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = img.alt;
+        });
         });
 
         // Close Lightbox clicking the 'X' button
         closeBtn.addEventListener('click', () => {
-            lightbox.style.display = 'none';
+        lightbox.style.display = 'none';
         });
 
         // Close Lightbox clicking anywhere in the dark background
         lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                lightbox.style.display = 'none';
-            }
+        if (e.target === lightbox) {
+        lightbox.style.display = 'none';
+        }
         });
     </script>
-    
+
 </body>
 </html>
