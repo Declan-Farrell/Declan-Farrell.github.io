@@ -423,13 +423,13 @@ body {
 .project-site-link {
     display: inline-block;
     text-decoration: none;
-    color: var(--accent-color);
+    color: #ffffff; /* This changes the text color to solid white */
     font-weight: 600;
     margin-top: 0.5rem;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
     .project-site-link:hover {
-        color: var(--text-primary);
-        transform: translateX(4px); /* Shifts the arrow slightly to the right on hover */
+        color: var(--accent-color); /* This will turn the link blue when hovered over */
+        transform: translateX(4px);
     }
