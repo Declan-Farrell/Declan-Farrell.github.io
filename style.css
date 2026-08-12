@@ -438,16 +438,16 @@ body {
 .projects-scroll-wrapper {
     display: flex; /* Forces elements to sit side-by-side */
     gap: 2rem; /* Spacing between individual cards */
-    overflow-x: auto; /* Enables a functional horizontal scroll bar */
+    overflow-x: auto; /* Enables the horizontal scroll bar tracking */
     overflow-y: hidden; /* Completely prevents vertical spilling */
     padding: 1.5rem 0.5rem 2.5rem 0.5rem;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Ensures smooth finger swipes on iPhones/tablets */
+    -webkit-overflow-scrolling: touch; /* Ensures smooth finger swipes on mobile touch viewports */
 }
 
-    /* Individual Project Card Width Overrides */
+    /* Updated Project Card Width - Made Wider */
     .projects-scroll-wrapper .project-card {
-        flex: 0 0 360px; /* Locks each card into a fixed responsive width */
+        flex: 0 0 440px; /* INCREASED FROM 360px TO 440px FOR WIDER BOXES */
         max-width: 100%;
     }
 
