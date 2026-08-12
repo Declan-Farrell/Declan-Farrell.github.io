@@ -471,29 +471,4 @@ body {
             background: var(--accent-color); /* Turns signature blue when clicked or hovered */
         }
 
-/* Infinite Carousel Base Formatting */
-.projects-scroll-wrapper {
-    width: 100%;
-    overflow-x: scroll; /* Retains background scrolling tracks */
-    overflow-y: hidden;
-    padding: 1.5rem 0 2.5rem 0;
-    scrollbar-width: none; /* Completely hides trackbars on Firefox */
-}
-
-    /* Hides native scrollbar layout indicators on Chrome, Safari, and Edge */
-    .projects-scroll-wrapper::-webkit-scrollbar {
-        display: none;
-    }
-
-/* Internal strip lining all cards up side by side indefinitely */
-.projects-inner-tape {
-    display: flex;
-    gap: 2rem; /* Keeps our 32px spacing layout consistent */
-    padding-left: 1rem;
-}
-
-    /* Individual Project Card Dimensions */
-    .projects-inner-tape .project-card {
-        flex: 0 0 360px; /* Keeps static card scaling lock */
-        max-width: 100%;
 
