@@ -470,32 +470,3 @@ body {
         .projects-scroll-wrapper::-webkit-scrollbar-thumb:hover {
             background: var(--accent-color); /* Turns signature blue when clicked or hovered */
         }
-
-/* Unreal Engine Badge Styling */
-.engine-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem; /* Space between icon and text label */
-    background-color: #0f172a; /* Deep dark background pill bubble */
-    border: 1px solid #334155; /* Subtle border boundary line */
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
-    margin-top: 0.25rem;
-    margin-bottom: 0.75rem; /* Pushes down project body summary text */
-}
-
-    .engine-badge img {
-        width: 14px; /* Tiny icon layout constraint scale */
-        height: 14px;
-        display: block;
-        filter: brightness(0) invert(1); /* Converts native brand color to perfectly clean white */
-    }
-
-    .engine-badge span {
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        color: var(--text-secondary); /* Professional muted gray tone typography */
-        text-transform: uppercase;
-    }
-
