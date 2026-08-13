@@ -470,3 +470,32 @@ body {
         .projects-scroll-wrapper::-webkit-scrollbar-thumb:hover {
             background: var(--accent-color); /* Turns signature blue when clicked or hovered */
         }
+
+/* Hero Button Layout Wrapper */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem; /* Clean spacing gap between the two buttons */
+    flex-wrap: wrap; /* Allows them to stack gracefully on small phone screens */
+    margin-top: 1.5rem;
+}
+
+/* Secondary/LinkedIn Outline Style Button */
+.btn-outline {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--text-primary); /* Base white text color */
+    border: 2px solid #334155; /* Subtle slate dark border outline frame */
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+    .btn-outline:hover {
+        border-color: var(--accent-color); /* Changes to bright signature blue on hover */
+        color: var(--accent-color);
+        transform: translateY(-2px); /* Slight elevation lift animation */
+    }
